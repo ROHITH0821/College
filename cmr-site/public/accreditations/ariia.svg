@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 100" role="img" aria-labelledby="ariia-title">
+  <title id="ariia-title">ARIIA - Atal Ranking of Institutions on Innovation Achievements</title>
+  <defs>
+    <linearGradient id="ariia-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#b8860b"/>
+      <stop offset="50%" stop-color="#d4af37"/>
+      <stop offset="100%" stop-color="#f0e68c"/>
+    </linearGradient>
+  </defs>
+  <polygon points="8,8 52,8 30,52" fill="url(#ariia-gold)" stroke="#8b6914" stroke-width="1"/>
+  <text x="64" y="38" font-family="system-ui,Segoe UI,sans-serif" font-size="26" font-weight="800" fill="#1f2937">ARIIA</text>
+  <text x="64" y="58" font-family="system-ui,Segoe UI,sans-serif" font-size="9.5" font-weight="600" fill="#4b5563">Atal Ranking of Institutions on Innovation Achievements</text>
+</svg>

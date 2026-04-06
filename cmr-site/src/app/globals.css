@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+:root {
+  --brand-blue: #1f3a5f;
+  --brand-orange: #f68121;
+  --brand-green: #6dbe45;
+  --background: #ffffff;
+  --surface-muted: #f5f7fa;
+  --foreground: #1f3a5f;
+  --muted: #5a6b82;
+  --sidebar-bg: #ffffff;
+  --sidebar-border: rgba(31, 58, 95, 0.12);
+  /** Matches `constants/layout` SIDEBAR_WIDTH_PX — 0 on small screens (drawer), fixed on lg+ */
+  --sidebar-offset: 0px;
+  /** Top navy utility bar row height (below safe-area); keep in sync with TopUtilityBar */
+  --utility-bar-inner: 3.5rem;
+  /**
+   * Sticky homepage sections sit below fixed chrome.
+   * Mobile: utility bar + h-14 header; desktop: utility bar only.
+   */
+  --home-sticky-top: calc(env(safe-area-inset-top) + var(--utility-bar-inner) + 3.5rem);
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --sidebar-offset: 280px;
+    --home-sticky-top: calc(env(safe-area-inset-top) + var(--utility-bar-inner));
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-plus-jakarta);
+  --font-display: var(--font-syne);
+  --animate-gallery-marquee: gallery-marquee 55s linear infinite;
+  --animate-gallery-marquee-reverse: gallery-marquee-reverse 68s linear infinite;
+  --animate-stats-marquee: stats-marquee 42s linear infinite;
+  --animate-media-marquee: media-marquee 52s linear infinite;
+  /** Same keyframes as `media-marquee`, opposite direction (row 2) */
+  --animate-media-marquee-reverse: media-marquee 60s linear infinite reverse;
+  --animate-orbit-particle: orbit-particle 14s ease-in-out infinite;
+}
+
+@keyframes orbit-particle {
+  0%,
+  100% {
+    transform: translate(0, 0);
+    opacity: 0.12;
+  }
+  33% {
+    transform: translate(8px, -10px);
+    opacity: 0.42;
+  }
+  66% {
+    transform: translate(-6px, 6px);
+    opacity: 0.22;
+  }
+}
+
+@keyframes gallery-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes gallery-marquee-reverse {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes stats-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes media-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--brand-orange) 35%, transparent);
+  color: var(--brand-blue);
+}
+
+/* Horizontal gallery scrollbar */
+.gallery-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+.gallery-scroll::-webkit-scrollbar-thumb {
+  background: color-mix(in oklab, var(--brand-blue) 22%, transparent);
+  border-radius: 999px;
+}
