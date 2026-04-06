@@ -1,9 +1,10 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
+import { HomeLogoLink } from "@/components/brand/HomeLogoLink";
 import { SiteLogo } from "@/components/brand/SiteLogo";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import { useIntroGate } from "@/context/IntroGateContext";
 
 /** Hold logo + tagline, then shutter slides up to reveal the site */
@@ -23,15 +24,20 @@ const taglineTransition = {
 
 export function MinimalIntro() {
   const pathname = usePathname();
-  const prefersReduced = useReducedMotion();
+  const prefersReduced = useReducedMotion() === true;
   const { setIntroComplete } = useIntroGate();
-  const [mounted, setMounted] = useState(false);
+  /** True on home for animated intro — set in layout effect so the first paint is white, not the dark hero. */
+  const [mounted, setMounted] = useState(() => pathname === "/" && !prefersReduced);
   const [exiting, setExiting] = useState(false);
   const [done, setDone] = useState(false);
 
-  useEffect(() => {
-    if (pathname !== "/") return;
+  useLayoutEffect(() => {
+    if (pathname !== "/") {
+      setMounted(false);
+      return;
+    }
     if (prefersReduced) {
+      setMounted(false);
       setDone(true);
       setIntroComplete(true);
       return;
@@ -84,7 +90,7 @@ export function MinimalIntro() {
         ease: [0.32, 0.72, 0, 1],
       }}
     >
-      <div className="absolute inset-0 bg-[#ffffff]" aria-hidden />
+      <div className="absolute inset-0 bg-white" aria-hidden />
 
       <div className="relative z-10 flex w-full max-w-3xl flex-col items-center px-2 text-center md:max-w-4xl">
         <motion.div
@@ -93,12 +99,17 @@ export function MinimalIntro() {
           transition={logoTransition}
           className="relative h-[min(44vw,240px)] w-[min(92vw,720px)] sm:h-[min(36vw,280px)] sm:w-[min(88vw,760px)] md:h-[min(320px,34vw)] md:w-[min(800px,86vw)]"
         >
-          <SiteLogo
-            className="h-full w-full object-contain object-center"
-            style={{
-              filter: "drop-shadow(0 4px 24px rgba(31, 58, 95, 0.06))",
-            }}
-          />
+          <HomeLogoLink
+            aria-label="CMR Engineering College — Home"
+            className="relative block h-full w-full outline-none focus-visible:ring-2 focus-visible:ring-[#1F3A5F]/30 focus-visible:ring-offset-2"
+          >
+            <SiteLogo
+              className="h-full w-full object-contain object-center"
+              style={{
+                filter: "drop-shadow(0 4px 24px rgba(31, 58, 95, 0.06))",
+              }}
+            />
+          </HomeLogoLink>
         </motion.div>
 
         <motion.p

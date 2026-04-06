@@ -74,7 +74,7 @@ export function HighlightsSection() {
   return (
     <section
       id="highlights"
-      className="relative border-b border-[#1F3A5F]/10 bg-[linear-gradient(180deg,#f8fafc_0%,#f1f5f9_45%,#fafbfc_100%)]"
+      className="relative flex min-h-0 flex-col border-b border-[#1F3A5F]/10 bg-[linear-gradient(180deg,#f8fafc_0%,#f1f5f9_45%,#fafbfc_100%)]"
     >
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-14 md:px-10 md:py-20 lg:px-12 lg:py-24">
         <motion.div

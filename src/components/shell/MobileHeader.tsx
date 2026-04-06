@@ -43,12 +43,12 @@ export function MobileHeader({ onMenuClick, navOpen }: Props) {
             }
       }
       style={{ perspective: 900, transformStyle: "preserve-3d" }}
-      className={`fixed left-0 right-0 top-[calc(env(safe-area-inset-top)+var(--utility-bar-inner))] z-[45] border-b border-[#1F3A5F]/10 bg-white/95 shadow-sm backdrop-blur-md lg:hidden ${
+      className={`fixed left-0 right-0 top-[calc(env(safe-area-inset-top)+var(--utility-bar-inner))] z-[45] border-b border-[#1F3A5F]/10 bg-white shadow-sm lg:hidden ${
         play ? "pointer-events-auto" : "pointer-events-none"
       }`}
     >
       <div className="flex h-14 items-center justify-between gap-2 px-3">
-        <HomeLogoLink className="flex h-10 min-w-0 flex-1 max-w-[220px] items-center sm:max-w-[260px]">
+        <HomeLogoLink className="relative z-[1] flex h-10 min-h-[44px] min-w-0 flex-1 max-w-[220px] touch-manipulation items-center sm:max-w-[260px]">
           <SiteLogo className="h-10 w-auto max-w-full object-contain object-left" />
         </HomeLogoLink>
         <button

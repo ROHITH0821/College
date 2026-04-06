@@ -35,7 +35,7 @@ export function AccreditationsSection() {
   return (
     <section
       id="accreditations"
-      className="flex w-full flex-col self-start overflow-hidden rounded-t-3xl border-b border-[#1F3A5F]/10 bg-white"
+      className="flex w-full flex-col overflow-hidden rounded-t-3xl border-b border-[#1F3A5F]/10 bg-white"
       aria-labelledby="accreditations-heading"
     >
       <div className="w-full shrink-0 px-3 pt-6 sm:px-5 md:px-8 md:pt-8 lg:px-10">

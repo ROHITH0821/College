@@ -22,7 +22,13 @@ export function HomeStackSection({ children, stackIndex, isFirst, className = ""
         zIndex: 10 + stackIndex,
       }}
     >
-      <div className="flex min-h-[100svh] w-full min-w-0 flex-col">{children}</div>
+      {/*
+        Fill the sticky viewport height so backgrounds cover the full card; otherwise the flex
+        child stays content-sized and the fixed hero shows through the empty band (mobile gap bug).
+      */}
+      <div className="flex min-h-[100svh] w-full min-w-0 flex-col [&>section]:flex [&>section]:min-h-0 [&>section]:flex-1 [&>section]:flex-col">
+        {children}
+      </div>
     </div>
   );
 }

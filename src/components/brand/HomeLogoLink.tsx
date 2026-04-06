@@ -1,33 +1,41 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import type { ComponentProps } from "react";
 import { scrollToHomeHeroTop } from "@/lib/home-hero";
 
 type Props = Omit<ComponentProps<typeof Link>, "href">;
 
 /**
- * Logo link to `/`. On the homepage, intercepts to scroll to the hero and clear hashes.
- * From other routes, uses default `Link` behaviour so Next.js performs client-side navigation
- * without a full document reload.
+ * Logo → `/`. Cross-route clicks use `router.push` so navigation stays App Router client-side
+ * (no full document reload). On `/`, scroll to hero top and clear hash.
  */
 export function HomeLogoLink({ onClick, ...props }: Props) {
   const pathname = usePathname();
+  const router = useRouter();
   const atHome = pathname === "/";
 
   return (
     <Link
       href="/"
-      scroll={!atHome}
+      prefetch
+      scroll={false}
       {...props}
       onClick={(e) => {
         onClick?.(e);
         if (e.defaultPrevented) return;
+        if (e.metaKey || e.ctrlKey || e.altKey || e.shiftKey) return;
+        if (typeof e.button === "number" && e.button !== 0) return;
+
         if (atHome) {
           e.preventDefault();
           scrollToHomeHeroTop();
+          return;
         }
+
+        e.preventDefault();
+        router.push("/", { scroll: true });
       }}
     />
   );

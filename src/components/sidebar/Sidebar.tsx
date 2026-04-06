@@ -271,7 +271,13 @@ export function Sidebar({ mobileOpen = false, onMobileClose }: SidebarProps) {
             }
       }
       style={{ width: SIDEBAR_WIDTH_PX }}
-      className={`fixed left-0 top-[calc(env(safe-area-inset-top)+var(--utility-bar-inner))] z-50 h-[calc(100dvh-env(safe-area-inset-top)-var(--utility-bar-inner))] min-h-0 ${play ? "pointer-events-auto" : "pointer-events-none"}`}
+      className={`fixed left-0 top-[calc(env(safe-area-inset-top)+var(--utility-bar-inner))] z-50 h-[calc(100dvh-env(safe-area-inset-top)-var(--utility-bar-inner))] min-h-0 ${
+        !play
+          ? "pointer-events-none"
+          : mobileOpen
+            ? "pointer-events-auto"
+            : "pointer-events-none lg:pointer-events-auto"
+      }`}
     >
       <aside
         ref={asideRef}
@@ -307,7 +313,7 @@ export function Sidebar({ mobileOpen = false, onMobileClose }: SidebarProps) {
             openSearch(true);
             onMobileClose?.();
           }}
-          className="group flex w-full items-center gap-2.5 rounded-xl border border-[#1F3A5F]/10 bg-[#F5F7FA] px-3 py-2.5 text-left text-[13px] text-[#1F3A5F]/55 shadow-[inset_0_1px_2px_rgba(31,58,95,0.04)] transition hover:border-[#F68121]/35 hover:bg-white hover:text-[#1F3A5F]/75"
+          className="group flex w-full items-center gap-2.5 rounded-xl border border-[#1F3A5F]/10 bg-white px-3 py-2.5 text-left text-[13px] text-[#1F3A5F]/55 shadow-[inset_0_1px_2px_rgba(31,58,95,0.04)] transition hover:border-[#F68121]/35 hover:bg-[#F5F7FA] hover:text-[#1F3A5F]/75"
           aria-label="Open search"
         >
           <Search
@@ -324,7 +330,7 @@ export function Sidebar({ mobileOpen = false, onMobileClose }: SidebarProps) {
       {/* Navigation — light panel */}
       <nav
         id="site-primary-nav"
-        className="flex min-h-0 flex-1 flex-col gap-0.5 overflow-y-auto overflow-x-hidden overscroll-contain bg-[#F5F7FA] px-2 py-3"
+        className="flex min-h-0 flex-1 flex-col gap-0.5 overflow-y-auto overflow-x-hidden overscroll-contain bg-white px-2 py-3"
         aria-label="Primary"
       >
         {NAV.map((item) => {
@@ -332,8 +338,8 @@ export function Sidebar({ mobileOpen = false, onMobileClose }: SidebarProps) {
           const active = isNavActive(item);
           const navClass = `group relative flex items-center gap-3 rounded-lg px-3 py-2.5 text-left text-[13px] font-medium leading-snug transition-colors ${
             active
-              ? "bg-white text-[#1F3A5F] shadow-sm ring-1 ring-[#1F3A5F]/10"
-              : "text-[#1F3A5F]/85 hover:bg-white/90 hover:text-[#1F3A5F]"
+              ? "bg-[#F5F7FA] text-[#1F3A5F] shadow-sm ring-1 ring-[#1F3A5F]/10"
+              : "text-[#1F3A5F]/85 hover:bg-[#F5F7FA] hover:text-[#1F3A5F]"
           }`;
           const inner = (
             <>
@@ -475,7 +481,7 @@ export function Sidebar({ mobileOpen = false, onMobileClose }: SidebarProps) {
         })}
       </nav>
 
-      <div className="shrink-0 space-y-3 border-t border-[#1F3A5F]/10 bg-[#F5F7FA] px-3 py-4 pb-[max(1rem,env(safe-area-inset-bottom))]">
+      <div className="shrink-0 space-y-3 border-t border-[#1F3A5F]/10 bg-white px-3 py-4 pb-[max(1rem,env(safe-area-inset-bottom))]">
         <HomeSectionLink
           href="/#apply"
           onClick={onMobileClose}

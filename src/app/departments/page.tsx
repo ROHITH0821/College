@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function DepartmentsIndexPage() {
   return (
     <>
-      <section className="border-b border-[#1F3A5F]/10 bg-white px-6 py-12 md:px-12 md:py-16 lg:px-16">
+      <section className="border-b border-[#1F3A5F]/10 bg-white px-4 pb-12 pt-3 sm:px-6 sm:pt-5 md:px-12 md:pb-16 md:pt-12 lg:px-16">
         <div className="mx-auto flex max-w-6xl flex-col items-center gap-10 md:flex-row md:items-center md:justify-between md:gap-12">
           <div className="max-w-2xl text-center md:text-left">
             <p className="text-xs font-bold uppercase tracking-[0.35em] text-[#F68121]">Academics</p>

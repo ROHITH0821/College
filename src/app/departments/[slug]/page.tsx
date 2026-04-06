@@ -29,7 +29,7 @@ export default async function DepartmentPage({ params }: Props) {
 
   return (
     <>
-      <section className="border-b border-[#1F3A5F]/10 bg-white px-6 py-10 md:px-12 md:py-14 lg:px-16">
+      <section className="border-b border-[#1F3A5F]/10 bg-white px-4 pb-10 pt-3 sm:px-6 sm:pt-5 md:px-12 md:pb-14 md:pt-10 lg:px-16">
         <div className="mx-auto flex max-w-6xl flex-col gap-8 md:flex-row md:items-start md:gap-10">
           <div className="relative mx-auto aspect-[4/3] w-full max-w-[280px] shrink-0 overflow-hidden rounded-2xl border border-[#1F3A5F]/10 bg-[#f5f7fa] shadow-sm md:mx-0 md:w-[260px]">
             <Image

@@ -14,6 +14,6 @@ export function scrollToHomeHeroTop() {
     window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   window.scrollTo({
     top: 0,
-    behavior: prefersReduced ? "instant" : "smooth",
+    behavior: prefersReduced ? "auto" : "smooth",
   });
 }

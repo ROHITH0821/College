@@ -56,7 +56,9 @@ export function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative m-0 h-full min-h-0 w-full overflow-hidden bg-[#1a1a1a] p-0"
+      className={`relative m-0 h-full min-h-0 w-full overflow-hidden p-0 transition-colors duration-200 ${
+        introComplete ? "bg-[#1a1a1a]" : "bg-white"
+      }`}
     >
       <motion.div
         style={{ y }}

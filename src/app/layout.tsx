@@ -51,6 +51,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      data-scroll-behavior="smooth"
       className={`${plusJakarta.variable} ${syne.variable} min-h-full antialiased`}
     >
       <body className="min-h-full overflow-x-hidden bg-[var(--background)] text-[var(--foreground)] font-sans">

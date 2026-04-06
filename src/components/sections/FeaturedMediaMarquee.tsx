@@ -9,17 +9,18 @@ import {
 
 function faviconSources(domain: string): string[] {
   const d = domain.trim();
+  /** DuckDuckGo first — avoids Google favicon redirects to gstatic that often 404 in DevTools. */
   const base = [
+    `https://icons.duckduckgo.com/ip3/${d}.ico`,
     `https://www.google.com/s2/favicons?domain=${encodeURIComponent(d)}&sz=256`,
     `https://logo.clearbit.com/${d}`,
-    `https://icons.duckduckgo.com/ip3/${d}.ico`,
   ];
   if (d.startsWith("www.")) {
     const bare = d.slice(4);
     base.push(
+      `https://icons.duckduckgo.com/ip3/${bare}.ico`,
       `https://www.google.com/s2/favicons?domain=${encodeURIComponent(bare)}&sz=256`,
       `https://logo.clearbit.com/${bare}`,
-      `https://icons.duckduckgo.com/ip3/${bare}.ico`,
     );
   }
   return base;

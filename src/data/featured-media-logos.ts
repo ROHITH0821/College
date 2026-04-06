@@ -27,7 +27,8 @@ export const FEATURED_MEDIA_LOGOS: FeaturedMediaLogo[] = [
     /** Bundled in /public — avoids broken remote loads & Wikimedia 404s */
     src: "/featured-media/google-news.svg",
   },
-  { id: "abn", alt: "ABN Andhra Jyothi", kind: "domain", domain: "www.abnandhrajyothy.com" },
+  /** Andhra Jyothi — `abnandhrajyothy` typo breaks favicon resolution; use live host */
+  { id: "abn", alt: "ABN Andhra Jyothi", kind: "domain", domain: "www.andhrajyothy.com" },
   { id: "the-print", alt: "The Print", kind: "domain", domain: "theprint.in" },
   { id: "etv-bharat", alt: "ETV Bharat", kind: "domain", domain: "etvbharat.com" },
   { id: "eenadu", alt: "Eenadu", kind: "domain", domain: "eenadu.net" },
