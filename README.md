@@ -31,9 +31,11 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 ## Deploy on Vercel
 
-1. Push this folder to GitHub, GitLab, or Bitbucket. If your repository root is the parent folder (not `cmr-site` alone), set **Root Directory** to `cmr-site` in the Vercel project settings.
-2. Import the repo at [vercel.com/new](https://vercel.com/new). Vercel detects **Next.js**; leave **Build Command** as `next build` and **Output** as default.
-3. **Node:** This project targets **Node 20+** (see `package.json` `engines` and `.nvmrc`). Vercel uses Node 20.x by default on current runtimes—no env vars are required for a static marketing site.
-4. Deploy. After the first build, assign your domain under **Project → Settings → Domains**.
+The Next.js app lives at the **repository root** (`src/app/page.tsx`, `next.config.ts`, `package.json`). No **Root Directory** override is required.
+
+1. Push to GitHub and import the repo at [vercel.com/new](https://vercel.com/new).
+2. Framework: **Next.js** (auto-detected). Build: `npm run build` (see `vercel.json`).
+3. **Node:** **Node 20+** (`package.json` `engines`, `.nvmrc`). No env vars are required for this static marketing site.
+4. Add your domain under **Project → Settings → Domains**.
 
 More detail: [Next.js on Vercel](https://vercel.com/docs/frameworks/nextjs).
