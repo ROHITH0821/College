@@ -83,7 +83,7 @@ export function HeroSection() {
 
       <motion.div
         style={{ opacity: contentOpacity }}
-        className="relative z-10 grid min-h-[100svh] grid-rows-[1fr_auto] px-6 md:px-12 lg:pr-16 lg:pl-[calc(var(--sidebar-offset)+4rem)]"
+        className="relative z-10 grid min-h-[100svh] grid-rows-[1fr_auto] px-4 sm:px-6 md:px-12 lg:pr-16 lg:pl-[calc(var(--sidebar-offset)+4rem)]"
       >
         {/* Headline — offset for utility bar + mobile header */}
         <div className="flex min-h-0 flex-col items-center justify-center px-0 pb-8 pt-[calc(env(safe-area-inset-top)+var(--utility-bar-inner)+3.5rem+0.75rem)] text-center md:pb-12 md:pt-[calc(var(--utility-bar-inner)+1rem)]">
@@ -95,7 +95,7 @@ export function HeroSection() {
           >
             <motion.h1
               variants={lineVariants}
-              className="font-display text-4xl font-bold leading-[1.05] tracking-[-0.03em] text-white sm:text-5xl lg:text-6xl xl:text-7xl"
+              className="text-balance break-words font-display text-3xl font-bold leading-[1.05] tracking-[-0.03em] text-white sm:text-5xl lg:text-6xl xl:text-7xl"
             >
               Shaping the Future Through Innovation
             </motion.h1>

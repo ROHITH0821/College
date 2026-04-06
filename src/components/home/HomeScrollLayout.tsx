@@ -11,7 +11,7 @@ type Props = {
  */
 export function HomeScrollLayout({ hero, children }: Props) {
   return (
-    <div className="relative min-w-0">
+    <div className="relative min-w-0 max-w-full overflow-x-clip">
       <div className="fixed inset-x-0 top-0 z-0 h-[100svh] min-w-0 overflow-hidden">
         {hero}
       </div>

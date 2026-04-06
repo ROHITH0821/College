@@ -58,7 +58,7 @@ export function BuiltForOutcomesSection() {
   return (
     <section
       id="outcomes"
-      className="scroll-mt-[var(--home-sticky-top)] relative overflow-hidden border-b border-[#1F3A5F]/10 bg-[#f4f7fb] px-6 py-16 md:px-12 md:py-24 lg:px-16"
+      className="scroll-mt-[var(--home-sticky-top)] relative overflow-hidden border-b border-[#1F3A5F]/10 bg-[#f4f7fb] px-4 py-14 sm:px-6 sm:py-16 md:px-12 md:py-24 lg:px-16"
     >
       {/* Ambient pattern — distinct from flat white sections */}
       <div

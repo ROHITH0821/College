@@ -35,7 +35,7 @@ export function StudentLifeSection() {
   return (
     <section
       id="students-corner"
-      className="border-b border-[#1F3A5F]/10 bg-white px-6 py-24 md:px-12 lg:px-16"
+      className="border-b border-[#1F3A5F]/10 bg-white px-4 py-20 sm:px-6 sm:py-24 md:px-12 lg:px-16"
     >
       <div className="mx-auto max-w-6xl">
         <motion.div

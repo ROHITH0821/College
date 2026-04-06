@@ -97,7 +97,7 @@ export function WhyChooseSection() {
   return (
     <section
       id="why-choose"
-      className="border-b border-[#1F3A5F]/10 bg-gradient-to-b from-[#e8f2ec] via-[#f4faf6] to-[#f0f4f8] px-6 py-16 md:px-12 md:py-24 lg:px-16"
+      className="border-b border-[#1F3A5F]/10 bg-gradient-to-b from-[#e8f2ec] via-[#f4faf6] to-[#f0f4f8] px-4 py-14 sm:px-6 sm:py-16 md:px-12 md:py-24 lg:px-16"
     >
       <div className="mx-auto max-w-6xl">
         <div className="grid items-start gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)] lg:items-center lg:gap-14 xl:gap-20">

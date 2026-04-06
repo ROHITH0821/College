@@ -7,7 +7,7 @@ export function CampusMapSection() {
   return (
     <section
       id="campus-map"
-      className="border-b border-[#1F3A5F]/10 bg-gradient-to-b from-[#F5F7FA] to-white px-6 py-16 md:px-12 md:py-20 lg:px-16"
+      className="border-b border-[#1F3A5F]/10 bg-gradient-to-b from-[#F5F7FA] to-white px-4 py-14 sm:px-6 sm:py-16 md:px-12 md:py-20 lg:px-16"
       aria-labelledby="campus-map-heading"
     >
       <div className="mx-auto max-w-5xl">

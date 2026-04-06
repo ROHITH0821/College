@@ -22,7 +22,7 @@ export function HomeStackSection({ children, stackIndex, isFirst, className = ""
         zIndex: 10 + stackIndex,
       }}
     >
-      <div className="flex min-h-[100svh] w-full flex-col">{children}</div>
+      <div className="flex min-h-[100svh] w-full min-w-0 flex-col">{children}</div>
     </div>
   );
 }

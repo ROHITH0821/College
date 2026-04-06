@@ -21,6 +21,13 @@
   --home-sticky-top: calc(env(safe-area-inset-top) + var(--utility-bar-inner) + 3.5rem);
 }
 
+/** Taller strip on small screens — two-row utility bar (badge + scroll links) */
+@media (max-width: 767px) {
+  :root {
+    --utility-bar-inner: 5rem;
+  }
+}
+
 @media (min-width: 1024px) {
   :root {
     --sidebar-offset: 280px;
@@ -104,9 +111,19 @@ html {
 body {
   margin: 0;
   min-height: 100%;
+  overflow-x: hidden;
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+/**
+ * Avoid horizontal scroll from oversized plain <img> (logos, marquees).
+ * Exclude `next/image` output (`data-nimg`) so fill/intrinsic layout stays correct.
+ */
+img:not([data-nimg]) {
+  max-width: 100%;
+  height: auto;
 }
 
 ::selection {

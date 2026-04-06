@@ -108,7 +108,7 @@ export function FacultyDirectory() {
   const reduceMotion = useReducedMotion() === true;
 
   return (
-    <section className="border-b border-[#1F3A5F]/10 bg-[#f1f5f9] px-6 py-16 md:px-12 md:py-24 lg:px-16">
+    <section className="border-b border-[#1F3A5F]/10 bg-[#f1f5f9] px-4 py-14 sm:px-6 sm:py-16 md:px-12 md:py-24 lg:px-16">
       <div className="mx-auto max-w-6xl">
         <motion.div
           initial={reduceMotion ? false : { opacity: 0, y: 12 }}

@@ -23,7 +23,7 @@ export function AboutStatsSection() {
   return (
     <section
       id="about-stats"
-      className="scroll-mt-[var(--home-sticky-top)] border-b border-[#1F3A5F]/10 bg-white px-6 py-16 md:px-12 md:py-24 lg:px-16"
+      className="scroll-mt-[var(--home-sticky-top)] border-b border-[#1F3A5F]/10 bg-white px-4 py-14 sm:px-6 sm:py-16 md:px-12 md:py-24 lg:px-16"
     >
       <div className="mx-auto max-w-6xl">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-start lg:gap-14">

@@ -103,7 +103,7 @@ export function FooterSection() {
         aria-hidden
       />
 
-      <div className="relative mx-auto max-w-6xl px-6 py-16 md:px-12 md:py-20 lg:px-16">
+      <div className="relative mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-16 md:px-12 md:py-20 lg:px-16">
         <div className="grid gap-14 lg:grid-cols-12 lg:gap-10 lg:gap-y-16">
           {/* Brand */}
           <div className="lg:col-span-4">

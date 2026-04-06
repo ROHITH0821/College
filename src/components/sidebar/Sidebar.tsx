@@ -530,7 +530,7 @@ export function Sidebar({ mobileOpen = false, onMobileClose }: SidebarProps) {
           <div
             role="menu"
             aria-hidden={!deptFlyoutOpen}
-            className={`fixed z-[100] max-h-[min(70vh,28rem)] w-[min(18.5rem,calc(100vw-var(--sidebar-offset)-0.5rem))] min-w-[15.5rem] overflow-y-auto rounded-xl border border-[#1F3A5F]/12 bg-white p-2 shadow-[0_12px_40px_rgba(31,58,95,0.2)] ring-1 ring-[#1F3A5F]/[0.08] transition-opacity duration-150 ${
+            className={`fixed z-[100] max-h-[min(70vh,28rem)] w-[min(18.5rem,calc(100vw-var(--sidebar-offset)-0.75rem))] min-w-0 max-w-[calc(100vw-var(--sidebar-offset)-0.75rem)] overflow-y-auto rounded-xl border border-[#1F3A5F]/12 bg-white p-2 shadow-[0_12px_40px_rgba(31,58,95,0.2)] ring-1 ring-[#1F3A5F]/[0.08] transition-opacity duration-150 ${
               deptFlyoutOpen
                 ? "pointer-events-auto opacity-100"
                 : "pointer-events-none opacity-0"

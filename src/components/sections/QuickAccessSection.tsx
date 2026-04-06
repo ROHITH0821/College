@@ -45,7 +45,7 @@ export function QuickAccessSection() {
   return (
     <section
       id="quick-access"
-      className="relative overflow-hidden border-b border-[#1F3A5F]/10 bg-[#eef2f7] px-6 py-20 md:px-12 md:py-28 lg:px-16"
+      className="relative overflow-hidden border-b border-[#1F3A5F]/10 bg-[#eef2f7] px-4 py-16 sm:px-6 sm:py-20 md:px-12 md:py-28 lg:px-16"
     >
       {/* Soft backdrop */}
       <div

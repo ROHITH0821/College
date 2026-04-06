@@ -56,7 +56,7 @@ export function UtilityPageLayout({
   return (
     <>
       <section
-        className={`relative overflow-hidden border-b border-white/10 bg-gradient-to-br ${grad} px-6 pb-16 pt-10 md:px-12 md:pb-20 md:pt-12 lg:px-16`}
+        className={`relative overflow-hidden border-b border-white/10 bg-gradient-to-br ${grad} px-4 pb-14 pt-9 sm:px-6 sm:pb-16 sm:pt-10 md:px-12 md:pb-20 md:pt-12 lg:px-16`}
       >
         {pattern !== "none" && (
           <div
@@ -73,7 +73,7 @@ export function UtilityPageLayout({
             <span className="font-medium text-white/95">{title}</span>
           </nav>
           <p className="text-xs font-bold uppercase tracking-[0.35em] text-[#F68121]">{eyebrow}</p>
-          <h1 className="mt-4 font-display text-3xl font-semibold tracking-tight text-white md:text-4xl lg:text-5xl">
+          <h1 className="mt-4 break-words font-display text-3xl font-semibold tracking-tight text-white md:text-4xl lg:text-5xl">
             {title}
           </h1>
           {description ? (
@@ -82,7 +82,7 @@ export function UtilityPageLayout({
         </div>
       </section>
 
-      <div className="relative z-[1] -mt-6 rounded-t-3xl border border-[#1F3A5F]/8 bg-white px-6 py-12 shadow-[0_-12px_40px_rgba(31,58,95,0.08)] md:px-12 lg:px-16">
+      <div className="relative z-[1] -mt-6 rounded-t-3xl border border-[#1F3A5F]/8 bg-white px-4 py-10 shadow-[0_-12px_40px_rgba(31,58,95,0.08)] sm:px-6 sm:py-12 md:px-12 lg:px-16">
         <div className="mx-auto max-w-4xl">{children}</div>
       </div>
     </>

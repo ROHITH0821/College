@@ -71,7 +71,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
           mobileOpen={mobileNavOpen}
           onMobileClose={() => setMobileNavOpen(false)}
         />
-        <div className="min-h-screen bg-[#F5F7FA] pl-[var(--sidebar-offset)] pt-[calc(env(safe-area-inset-top)+var(--utility-bar-inner)+3.5rem)] transition-[padding] duration-300 ease-out lg:pt-[var(--utility-bar-inner)]">
+        <div className="min-h-screen min-w-0 max-w-full overflow-x-clip bg-[#F5F7FA] pl-[var(--sidebar-offset)] pt-[calc(env(safe-area-inset-top)+var(--utility-bar-inner)+3.5rem)] transition-[padding] duration-300 ease-out lg:pt-[var(--utility-bar-inner)]">
           {children}
         </div>
       </div>

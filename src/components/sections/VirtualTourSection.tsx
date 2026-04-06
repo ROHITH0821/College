@@ -15,7 +15,7 @@ export function VirtualTourSection() {
   return (
     <section
       id="virtual-tour"
-      className="relative overflow-hidden border-b border-[#1F3A5F]/10 bg-[#0a1628] px-6 py-20 md:px-12 md:py-24 lg:px-16"
+      className="relative overflow-hidden border-b border-[#1F3A5F]/10 bg-[#0a1628] px-4 py-16 sm:px-6 sm:py-20 md:px-12 md:py-24 lg:px-16"
       aria-labelledby="virtual-tour-home-heading"
     >
       <div

@@ -53,7 +53,7 @@ export default function RootLayout({
       lang="en"
       className={`${plusJakarta.variable} ${syne.variable} min-h-full antialiased`}
     >
-      <body className="min-h-full bg-[var(--background)] text-[var(--foreground)] font-sans">
+      <body className="min-h-full overflow-x-hidden bg-[var(--background)] text-[var(--foreground)] font-sans">
         <IntroGateRoot>
           <AppShell>{children}</AppShell>
         </IntroGateRoot>
