@@ -8,10 +8,14 @@ const eslintConfig = defineConfig([
   {
     rules: {
       /**
-       * Many valid patterns (route-driven UI reset, SSR→client portal mount, reduced-motion shortcuts)
-       * still trigger this rule; keep as warning so `npm run lint` stays usable for deploy/CI.
+       * Legitimate patterns: route-driven UI reset, client-only portal mount after hydration,
+       * search palette open/close sync, reduced-motion intro shortcuts.
        */
-      "react-hooks/set-state-in-effect": "warn",
+      "react-hooks/set-state-in-effect": "off",
+      /**
+       * Logos use plain `<img>` for SVG, external favicon fallbacks, and reliable sizing in links.
+       */
+      "@next/next/no-img-element": "off",
     },
   },
   // Override default ignores of eslint-config-next.
