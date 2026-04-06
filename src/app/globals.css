@@ -21,13 +21,6 @@
   --home-sticky-top: calc(env(safe-area-inset-top) + var(--utility-bar-inner) + 3.5rem);
 }
 
-/** Taller strip on small screens — two-row utility bar (badge + scroll links) */
-@media (max-width: 767px) {
-  :root {
-    --utility-bar-inner: 5rem;
-  }
-}
-
 @media (min-width: 1024px) {
   :root {
     --sidebar-offset: 280px;

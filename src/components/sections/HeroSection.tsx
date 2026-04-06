@@ -4,7 +4,6 @@ import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion
 import { HomeSectionLink } from "@/components/navigation/HomeSectionLink";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 import { useIntroGate } from "@/context/IntroGateContext";
 
 const heroImage = "/hero-courtyard.jpg";
@@ -112,10 +111,9 @@ export function HeroSection() {
             >
               <Link
                 href="/programs"
-                className="inline-flex min-h-[48px] items-center gap-2 rounded-full bg-[#1F3A5F] px-7 py-3 text-[0.9375rem] font-semibold text-white shadow-[0_16px_40px_rgba(15,23,42,0.5)] ring-1 ring-white/20 transition hover:-translate-y-0.5 hover:bg-[#2a4a73] hover:shadow-[0_20px_48px_rgba(15,23,42,0.55)] active:translate-y-0"
+                className="inline-flex min-h-[48px] items-center justify-center rounded-full bg-[#1F3A5F] px-7 py-3 text-[0.9375rem] font-semibold text-white shadow-[0_16px_40px_rgba(15,23,42,0.5)] ring-1 ring-white/20 transition hover:-translate-y-0.5 hover:bg-[#2a4a73] hover:shadow-[0_20px_48px_rgba(15,23,42,0.55)] active:translate-y-0"
               >
                 Explore Programs
-                <ArrowRight className="h-4 w-4 shrink-0" aria-hidden />
               </Link>
               <HomeSectionLink
                 href="/#apply"
